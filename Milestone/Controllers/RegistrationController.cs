@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Milestone.Models;
+using Milestone.Services;
+using System.Linq.Expressions;
 
 namespace Milestone.Controllers
 {
@@ -13,7 +15,16 @@ namespace Milestone.Controllers
         [HttpPost]
         public IActionResult RegistrationResult(RegistrationModel user)
         {
-            return View(user);
-        }
+            RegistrationDAO registrationDAO = new RegistrationDAO();
+
+            if (registrationDAO.RegisterUser(user))
+            {
+                return View("RegistrationResult", user);
+            }
+            else
+            {
+                return View("Error", new ErrorViewModel { RequestId = "RegistrationFailed" });
+            }
+        }     
     }
 }

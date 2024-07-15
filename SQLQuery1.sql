@@ -1,0 +1,2 @@
+﻿INSERT INTO dbo.UsersM (FIRSTNAME, LASTNAME, SEX, AGE, STATE, EMAIL, USERNAME, PASSWORD) VALUES ('Miranda', 'Barnes', 'Female', '37', 'California', 'Miranda@gmail.com', 'Mirandakae', 'secretword');
+INSERT INTO dbo.UsersM (FIRSTNAME, LASTNAME, SEX, AGE, STATE, EMAIL, USERNAME, PASSWORD) VALUES ('Jane', 'Doe', 'Female', '27', 'Washington', 'Jane@gmail.com', 'Janedoe', 'somethingsecret');
